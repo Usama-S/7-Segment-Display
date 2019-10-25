@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="main1.css" />
+    <script src="json.js"></script>
+
+</head>
+<body onload="main()">
+    
+    <table class="main">
+        <tr>
+            <div class="sixth">
+                <div id="a-div6"><img src="hor.png" class="ledh" id="a6" /></div>
+                <idv id="b-div6"><img src="vert.png" class="ledv" id="f6" /></idv>
+                <idv id="c-div6"><img src="vert.png" class="ledv" id="b6" /></idv>
+                <div id="d-div6"><img src="hor.png" class="ledh" id="g6" /></div>
+                <idv id="e-div6"><img src="vert.png" class="ledv" id="e6" /></idv>
+                <idv id="f-div6"><img src="vert.png" class="ledv" id="c6" /></idv>
+                <div id="g-div6"><img src="hor.png" class="ledh" id="d6" /></div>
+            </div>
+
+            <div class="fifth">
+                <div id="a-div5"><img src="hor.png" class="ledh" id="a5" /></div>
+                <idv id="b-div5"><img src="vert.png" class="ledv" id="f5" /></idv>
+                <idv id="c-div5"><img src="vert.png" class="ledv" id="b5" /></idv>
+                <div id="d-div5"><img src="hor.png" class="ledh" id="g5" /></div>
+                <idv id="e-div5"><img src="vert.png" class="ledv" id="e5" /></idv>
+                <idv id="f-div5"><img src="vert.png" class="ledv" id="c5" /></idv>
+                <div id="g-div5"><img src="hor.png" class="ledh" id="d5" /></div>
+            </div>
+
+            <div class="dot">
+                <img id="dot1" src="dot.png" />
+            </div>
+
+            <div class="fourth">
+                <div id="a-div4"><img src="hor.png" class="ledh" id="a4" /></div>
+                <idv id="b-div4"><img src="vert.png" class="ledv" id="f4" /></idv>
+                <idv id="c-div4"><img src="vert.png" class="ledv" id="b4" /></idv>
+                <div id="d-div4"><img src="hor.png" class="ledh" id="g4" /></div>
+                <idv id="e-div4"><img src="vert.png" class="ledv" id="e4" /></idv>
+                <idv id="f-div4"><img src="vert.png" class="ledv" id="c4" /></idv>
+                <div id="g-div4"><img src="hor.png" class="ledh" id="d4" /></div>
+            </div>
+
+            <div class="third">
+                <div id="a-div3"><img src="hor.png" class="ledh" id="a3" /></div>
+                <idv id="b-div3"><img src="vert.png" class="ledv" id="f3" /></idv>
+                <idv id="c-div3"><img src="vert.png" class="ledv" id="b3" /></idv>
+                <div id="d-div3"><img src="hor.png" class="ledh" id="g3" /></div>
+                <idv id="e-div3"><img src="vert.png" class="ledv" id="e3" /></idv>
+                <idv id="f-div3"><img src="vert.png" class="ledv" id="c3" /></idv>
+                <div id="g-div3"><img src="hor.png" class="ledh" id="d3" /></div>
+            </div>
+
+            <div class="dot">
+                <img id="dot2" src="dot1.png" />
+            </div>
+
+            <div class="second">
+                <div id="a-div2"><img src="hor.png" class="ledh" id="a2" /></div>
+                <idv id="b-div2"><img src="vert.png" class="ledv" id="f2" /></idv>
+                <idv id="c-div2"><img src="vert.png" class="ledv" id="b2" /></idv>
+                <div id="d-div2"><img src="hor.png" class="ledh" id="g2" /></div>
+                <idv id="e-div2"><img src="vert.png" class="ledv" id="e2" /></idv>
+                <idv id="f-div2"><img src="vert.png" class="ledv" id="c2" /></idv>
+                <div id="g-div2"><img src="hor.png" class="ledh" id="d2" /></div>
+            </div>
+
+            <div class="first">
+                <div id="a-div"><img src="hor.png" class="ledh" id="a1" /></div>
+                <idv id="b-div"><img src="vert.png" class="ledv" id="f1" /></idv>
+                <idv id="c-div"><img src="vert.png" class="ledv" id="b1" /></idv>
+                <div id="d-div"><img src="hor.png" class="ledh" id="g1" /></div>
+                <idv id="e-div"><img src="vert.png" class="ledv" id="e1" /></idv>
+                <idv id="f-div"><img src="vert.png" class="ledv" id="c1" /></idv>
+                <div id="g-div"><img src="hor.png" class="ledh" id="d1" /></div>
+            </div>
+        </tr>
+
+        <h1 id="am">AM</h1>
+        <h1 id="pm">PM</h1>
+
+    </table>
+
+    <!--<br /><br /><br />
+    <input id="start" type="button" value="Start" onclick="main();" />
+    <input id="stop" type="button" value="Stop" onclick="stops();" />-->
+
+</body>
+</html>
+
+<script>
+
+    var date = new Date();
+
+    var datehour = date.getHours();
+    var datemin = date.getMinutes();
+    var datesec = date.getSeconds();
+
+    if (datehour >= 12) {
+        datehour -= 12;
+        document.getElementById('pm').style.display = "block";
+        document.getElementById('am').style.display = "none";
+    }
+    else {
+        document.getElementById('am').style.display = "block";
+        document.getElementById('pm').style.display = "none";
+    }
+
+    var hr1 = datehour % 10;
+    var hr2 = parseInt(datehour / 10);
+
+    var min1 = datemin % 10;
+    var min2 = parseInt(datemin / 10);
+
+    var sec1 = datesec % 10;
+    var sec2 = parseInt(datesec / 10);
+
+    var i = sec1;
+    var j = sec2;
+    var k = min1;
+    var l = min2;
+    var m = hr1;
+    var n = hr2;
+    var time1, time2;
+
+    function main() {
+        time1 = setInterval(function () {
+            one();
+            two();
+            three();
+            four();
+            five();
+            six();
+
+            i++;
+            if (i == 10) {
+                j++;
+                i = 0;
+                if (j == 6) {
+                    k++;
+                    j = 0;
+                    if (k == 10) {
+                        l++;
+                        k = 0;
+                        if (l == 6) {
+                            m++;
+                            l = 0;
+                            if (m == 10) {
+                                n++;
+                                m = 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }, 1000);
+
+        time2 = setInterval(function () {
+            document.getElementById('dot1').src = 'dot.png';
+            setTimeout(function () {
+                document.getElementById('dot1').src = 'dot-red.png';
+            }, 1000);
+        }, 2000);
+
+        document.getElementById('dot2').src = 'dot1-red.png';
+
+        document.getElementById('start').style.display = 'none';
+
+    }
+
+
+    function one() {
+        document.getElementById('a1').src = key[i].a + '.png';
+        document.getElementById('b1').src = key[i].b + '.png';
+        document.getElementById('c1').src = key[i].c + '.png';
+        document.getElementById('d1').src = key[i].d + '.png';
+        document.getElementById('e1').src = key[i].e + '.png';
+        document.getElementById('f1').src = key[i].f + '.png';
+        document.getElementById('g1').src = key[i].g + '.png';
+    }
+
+    function two() {
+        document.getElementById('a2').src = key[j].a + '.png';
+        document.getElementById('b2').src = key[j].b + '.png';
+        document.getElementById('c2').src = key[j].c + '.png';
+        document.getElementById('d2').src = key[j].d + '.png';
+        document.getElementById('e2').src = key[j].e + '.png';
+        document.getElementById('f2').src = key[j].f + '.png';
+        document.getElementById('g2').src = key[j].g + '.png';
+    }
+
+    function three() {
+        document.getElementById('a3').src = key[k].a + '.png';
+        document.getElementById('b3').src = key[k].b + '.png';
+        document.getElementById('c3').src = key[k].c + '.png';
+        document.getElementById('d3').src = key[k].d + '.png';
+        document.getElementById('e3').src = key[k].e + '.png';
+        document.getElementById('f3').src = key[k].f + '.png';
+        document.getElementById('g3').src = key[k].g + '.png';
+    }
+
+    function four() {
+        document.getElementById('a4').src = key[l].a + '.png';
+        document.getElementById('b4').src = key[l].b + '.png';
+        document.getElementById('c4').src = key[l].c + '.png';
+        document.getElementById('d4').src = key[l].d + '.png';
+        document.getElementById('e4').src = key[l].e + '.png';
+        document.getElementById('f4').src = key[l].f + '.png';
+        document.getElementById('g4').src = key[l].g + '.png';
+    }
+
+    function five() {
+        document.getElementById('a5').src = key[m].a + '.png';
+        document.getElementById('b5').src = key[m].b + '.png';
+        document.getElementById('c5').src = key[m].c + '.png';
+        document.getElementById('d5').src = key[m].d + '.png';
+        document.getElementById('e5').src = key[m].e + '.png';
+        document.getElementById('f5').src = key[m].f + '.png';
+        document.getElementById('g5').src = key[m].g + '.png';
+    }
+
+    function six() {
+        document.getElementById('a6').src = key[n].a + '.png';
+        document.getElementById('b6').src = key[n].b + '.png';
+        document.getElementById('c6').src = key[n].c + '.png';
+        document.getElementById('d6').src = key[n].d + '.png';
+        document.getElementById('e6').src = key[n].e + '.png';
+        document.getElementById('f6').src = key[n].f + '.png';
+        document.getElementById('g6').src = key[n].g + '.png';
+    }
+
+    function stops() {
+        clearInterval(time1);
+        clearInterval(time2);
+
+        setTimeout(function () {
+            alert('Press F5 to reset the stopwatch')
+        }, 2000);
+    }
+
+</script>

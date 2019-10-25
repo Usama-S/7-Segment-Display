@@ -1,0 +1,42 @@
+#c-div, #f-div, #c-div2, #f-div2, #c-div3, #f-div3, #c-div4, #f-div4, #c-div5, #f-div5, #c-div6, #f-div6 {
+    margin-left: 72px;
+}
+
+#a-div, #a-div2, #a-div3, #a-div4, #a-div5, #a-div6 {
+    margin-left: 20px;
+    margin-bottom: -20px;
+}
+
+#d-div, #d-div2, #d-div3, #d-div4, #d-div5, #d-div6 {
+    margin-left: 20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+#g-div, #g-div2, #g-div3, #g-div4, #g-div5, #g-div6 {
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.main{
+    width: 100%;
+}
+
+.first, .second, .third, .fourth, .fifth, .sixth, .dot {
+    float: left;
+    margin-left: 20px;
+}
+
+#dot2{
+    margin-top: 200px;
+}
+
+#dot1{
+    margin-top: 60px;
+}
+
+#start, #stop{
+    height: 100px;
+    width: 200px;
+    font-size: 48pt;
+}
